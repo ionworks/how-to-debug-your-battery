@@ -13,7 +13,7 @@ Below is an indicative spider-plot of the main metrics that battery engineers te
 
 ![](figures/spider.png)
 
-A good intro into cell design can be found at [batterydesign.net](https://www.batterydesign.net/power-versus-energy-cells/). Below is an image taken from that site of the difference between high power and high energy. Thinner electrodes tend to be better for drawing larger currents because there is less material in the way of ion transport but they have more inactive material (i.e. current collectors - the yellow bits) per unit volume making them less energy dense.
+A good intro into cell design can be found at [batterydesign.net](https://www.batterydesign.net/power-versus-energy-cells/). Below is an image taken from that site of the difference between high power and high energy. Thinner electrodes tend to be better for drawing larger currents because there is less material in the way of ion transport but they have more inactive material (i.e. current collectors and separators - the gold, grey and yellow bits) per unit volume making them less energy dense.
 
 ![](figures/power-vs-energy-cell-b.webp)
 
