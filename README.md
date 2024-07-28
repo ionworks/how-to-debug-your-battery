@@ -139,7 +139,7 @@ How do I know all this you might wonder? Well, there is a certain amount of intu
 
 ## PyBaMM to the rescue
 
-Let's look at some cool things you can do with simulation to help debug your battery problem. [PyBaMM](https://github.com/pybamm-team/PyBaMM/) is open-source and written in Python (that's the **Py** bit). The "BaMM" stands for **Ba**tery **M**athematical **M**odelling.
+Let's look at some cool things you can do with simulation to help debug your battery problem. [PyBaMM](https://github.com/pybamm-team/PyBaMM/) is open-source and written in Python (that's the **Py** bit). The "BaMM" stands for **Ba**ttery **M**athematical **M**odelling.
 
 First off, what is going on inside when I charge and discharge and why is my voltage changing the way it does? Which physical processes and their related design features have the biggest effect on the voltage?
 
