@@ -6,14 +6,14 @@ Picture the scene, you're an engineer at an electric vehicle company and your bo
 
 ## The **"and"** problem
 
-
 It seems like there's no good solution in the market today. Batteries are either designed to be high energy **or** high power, not high energy **and** power. If we stick a bunch of high energy batteries in the vehicle we might get more range but then when we try to accelerate they overheat because the rated power is too low and the losses in the system are too high. This causes us to over-engineer the cooling system (adding weight and cost) and we also find that batteries operating at higher temperatures lose capacity faster. Also there are other constraints on the battery design, such as safety, lifetime, weight and last but by no means least cost.
 
-Below is an indicative spider-plot of the main metrics that battery engineers tend to care about when designing or selecting cells which often compete with one another. [1]
+Below is an indicative spider-plot of the main metrics that battery engineers tend to care about when designing or selecting cells which often compete with one another.
+
 
 ![](figures/spider.png)
 
-A good intro into cell design can be found at [batterydesign.net](https://www.batterydesign.net/power-versus-energy-cells/) [2]. Below is an image taken from that site of the difference between high power and high energy. Thinner electrodes tend to be better for drawing larger currents because there is less material in the way of ion transport but they have more inactive material (i.e. current colllectors - the yellow bits) per unit volume making them less energy dense.
+A good intro into cell design can be found at [batterydesign.net](https://www.batterydesign.net/power-versus-energy-cells/). Below is an image taken from that site of the difference between high power and high energy. Thinner electrodes tend to be better for drawing larger currents because there is less material in the way of ion transport but they have more inactive material (i.e. current colllectors - the yellow bits) per unit volume making them less energy dense.
 
 ![](figures/power-vs-energy-cell-b.webp)
 
@@ -138,7 +138,7 @@ How do I know all this you might wonder? Well, there is a certain amount of intu
 
 ## PyBaMM to the rescue
 
-Let's look at some cool things you can do with simulation to help debug your battery problem. ![PyBaMM](https://github.com/pybamm-team/PyBaMM/) is open-source and written in Python (that's the **Py** bit). The "BaMM" stands for **Ba**tery **M**athematical **M**odelling.
+Let's look at some cool things you can do with simulation to help debug your battery problem. [PyBaMM](https://github.com/pybamm-team/PyBaMM/) is open-source and written in Python (that's the **Py** bit). The "BaMM" stands for **Ba**tery **M**athematical **M**odelling.
 
 First off, what is going on inside when I charge and discharge and why is my voltage changing the way it does? Which physical processes and their related design features have the biggest effect on the voltage?
 
@@ -225,7 +225,7 @@ plotter.plot(t=[1800]) # At point of rest
 
 Now the contributions of the postive solid particle to the voltage at rest is resolved much more quickly than before. This is because the smaller particle size allows for faster diffusion of lithium ions in and out of the particle. This is a good example of how the model can be used to investigate the effect of different parameters on the performance of a battery.
 
-This is just one example of how to use modelling to debug your battery problem. **PyBaMM** also has many other examples including one on modelling ![hysteresis](https://docs.pybamm.org/en/stable/source/examples/notebooks/models/differential-capacity-hysteresis-state.html) in silicon anodes. Also as we can see here a single experiment takes a matter of seconds and with some of the simpler models only a matter of ms. This helps engineers really battle the curse of dimensionality. For example the ragone plot below sweeping over some of the common parameters you might investigate changing contains 6500 data points and with each one taking less than 1s running one after the other on a single core would take under 2 hours to compute, already a massive saving compared to 6.5 days with our 1000 channel cycler lab. With parallel computing this number can be cut to less than a minute.
+This is just one example of how to use modelling to debug your battery problem. **PyBaMM** also has many other examples including one on modelling [hysteresis](https://docs.pybamm.org/en/stable/source/examples/notebooks/models/differential-capacity-hysteresis-state.html) in silicon anodes. Also as we can see here a single experiment takes a matter of seconds and with some of the simpler models only a matter of ms. This helps engineers really battle the curse of dimensionality. For example the ragone plot below sweeping over some of the common parameters you might investigate changing contains 6500 data points and with each one taking less than 1s running one after the other on a single core would take under 2 hours to compute, already a massive saving compared to 6.5 days with our 1000 channel cycler lab. With parallel computing this number can be cut to less than a minute.
 
 ![](figures/ragone.png)
 
