@@ -114,6 +114,8 @@ Here's a great and easy to understand video by The Limiting Factor on how batter
 
 Adding silicon to an anode gives more capacity to the cell as there are more host sites for lithium per unit volume but this does have one or two drawbacks. The first is what happens to the cell voltage:
 
+### Voltage Hysteresis
+
 There are typically several stages of the process of lithiation where the crystal structure tends to form stable phases as the degree of lithiation increases or decreases. The chemical potential of the lithiated particles is directly related to the degree of lithiation (hard to measure) and this basically translates to the open circuit potential or voltage of the material (easier to measure). 
 
 Without diving too much deeper into the physics we can safely say, as you charge and dicharge, ions move in and out of the host material and voltage changes. The voltage changes more rapidly sometimes when crystal structures are changing or not changing from one stable phase to the next. Careful analysis of the open-circuit potential and it's derivative with respect to lithiation or capacity (dVdQ) can then reveal what the material inside might be because crystals are "somewhat" predictable. On the flip side: if you know the material you can predict the voltage (something the battery systems designers really like to know). I say "somewhat" because silicon unfortunately suffers from voltage hysteresis meaning that the voltage when charging and discharging in a cycle follows different paths, even when cycling very slowly, say 1 cycle per day. 
@@ -124,9 +126,11 @@ It sounds like a fairly trivial thing to know how much charge your battery has l
 
 But is voltage reliable? No not really. Voltage has its issues too and depends on how far from equilibrium the system is. Often what happens is the battery is left at rest and then cells connected in parallel start to equalize thier open circuit potentials and current re-balances. The overall charge left in the system is still the same but the voltage at rest has relaxed closer to equilibrium compared with when you switched the system off (this also happens inside the cell as well as between cells). Voltage also depends on temperature, ageing, and also whether you are charging or dicharging the battery (hysteresis).
 
-![](figures/cracking.jpg)
+### Swelling & Cracking
 
 Another problem with silicon is that the particles swell to around 80% bigger when lithiated compared to de-lithiated. This is an issue because this causes stress to the particle itself which may break up and no-longer form an active part of the material, and it may also impact its surrounding host material, either breaking that or breaking its connection with it. These mechanical effects cause accelerated ageing of the cell where active material inventory is lost more quickly and cell capacity decreases.
+
+![](figures/cracking.jpg)
 
 Fortunately, making the particles smaller, helps both with the voltage hysteresis and the effects of swelling, it also increases the active surface area per unit mass of the silicon and this helps lower the losses associated with the reactions in the battery.
 
