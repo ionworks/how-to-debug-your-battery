@@ -160,7 +160,7 @@ plotter.dynamic_plot()
 
 ![](figures/plot.gif)
 
-Here we can clearly see the big difference in voltage when we stop discharging the battery and start resting. But what exactly is going on here? A useful feature of PyBaMM is to split the voltage into it's constituent components. These are known as overpotentials. You have the ideal potential of the battery for a certain state of charge when everything is in equilibrium: the open-circuit potential (OCP) and then you have all the voltage losses associated with things not being at equilibrium.
+Here we can clearly see the big difference in voltage when we stop discharging the battery and start resting. But what exactly is going on here? A useful feature of PyBaMM is to split the voltage into its constituent components, known as overpotentials. You have the ideal potential of the battery for a certain state of charge when everything is in equilibrium: the open-circuit potential (OCP) and then you have all the voltage losses associated with things not being at equilibrium.
 
 ```
 pybamm.plot_voltage_components(solution)
