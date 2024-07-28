@@ -1,5 +1,5 @@
 # How to debug your battery
-### By [Tom Tranter](https://www.linkedin.com/in/tom-tranter-355a1033/), Co-founder & CTO at [Ionworks](www.ionworks.com)
+### By [Tom Tranter](https://www.linkedin.com/in/tom-tranter-355a1033/), Co-founder & CTO at [Ionworks](https://www.ionworks.com/)
 
 
 Picture the scene, you're an engineer at an electric vehicle company and your boss comes to you and says: *"Jeremy we've got a problem!"* (your name is Jeremy by the way) *"It's these damn batteries, there's just too many of them in the car and it's weighing us down but we really want our customers to be able to drive 400 miles without having to stop and charge!"* - What do you do? How do you debug your battery? It's a black box of magic right?!? Wrong. Use simulation.
@@ -233,7 +233,7 @@ If you liked this How to guide and want to learn more about battery modelling he
 
 ![](figures/pybamm.png)
 
-For enterprises looking to get help with their battery modelling hit me up at tom@ionworks.com or head to www.ionworks.com
+For enterprises looking to get help with their battery modelling hit me up at tom@ionworks.com or head to our [website](https://www.ionworks.com/)
 
 ![](figures/ionworks.png)
 
