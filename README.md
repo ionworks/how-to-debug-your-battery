@@ -18,7 +18,7 @@ A good intro into cell design can be found at [batterydesign.net](https://www.ba
 
 ![](figures/power-vs-energy-cell-b.webp)
 
-This problem is even bigger for your buddy designing batteries for electric aircraft as the peak power needed for take-off and landing is much higher (10 x) than the power needed for cruising. So you have to prioritize power and sacrifice range - aircraft also find it really hard to top-up charge mid flight :rofl:. For a great perspective on the prospects of electric flight I recommend [this article](https://www.nature.com/articles/s41586-021-04139-1).
+This problem is even bigger for your buddy designing batteries for electric aircraft as the peak power needed for take-off and landing is much higher (10 x) than the power needed for cruising. So you have to prioritize power and sacrifice range - aircraft also find it really hard to top-up charge mid flight :rofl:. For great perspectives on the prospects of electric flight and required performance metrics for the battery I recommend [this article](https://pubs.acs.org/doi/full/10.1021/acsenergylett.8b02195) and [this article](https://www.nature.com/articles/s41586-021-04139-1).
 
 Luckily you know an engineer at your battery supplier and can call them to discuss the problem.
 
