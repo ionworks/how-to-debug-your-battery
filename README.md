@@ -13,11 +13,11 @@ Below is an indicative spider-plot of the main metrics that battery engineers te
 
 ![](figures/spider.png)
 
-A good intro into cell design can be found at [batterydesign.net](https://www.batterydesign.net/power-versus-energy-cells/). Below is an image taken from that site of the difference between high power and high energy. Thinner electrodes tend to be better for drawing larger currents because there is less material in the way of ion transport but they have more inactive material (i.e. current colllectors - the yellow bits) per unit volume making them less energy dense.
+A good intro into cell design can be found at [batterydesign.net](https://www.batterydesign.net/power-versus-energy-cells/). Below is an image taken from that site of the difference between high power and high energy. Thinner electrodes tend to be better for drawing larger currents because there is less material in the way of ion transport but they have more inactive material (i.e. current collectors - the yellow bits) per unit volume making them less energy dense.
 
 ![](figures/power-vs-energy-cell-b.webp)
 
-This problem is even bigger for your buddy designing batteries for electric aircraft as the peak power needed for take-off and landing is much higher (10 x) than the power needed for cruising. So you have to prioritize power and sacrifice range - aircraft also find it really hard to top-up charge mid flight :rofl:. For a great perspective on the prospects of electric flight I recommend [this artcle](https://www.nature.com/articles/s41586-021-04139-1).
+This problem is even bigger for your buddy designing batteries for electric aircraft as the peak power needed for take-off and landing is much higher (10 x) than the power needed for cruising. So you have to prioritize power and sacrifice range - aircraft also find it really hard to top-up charge mid flight :rofl:. For a great perspective on the prospects of electric flight I recommend [this article](https://www.nature.com/articles/s41586-021-04139-1).
 
 Luckily you know an engineer at your battery supplier and can call them to discuss the problem.
 
@@ -94,7 +94,7 @@ plot_points(x, y, z)
 
 Now testing 3,486,784,401 batteries is obviously a **ridiculous** thing to do and no reasonable battery developer would carry out that many experiments. Even if you parallelize by say 1000 and have a huge test facility cycling batteries constantly that's still over 1 million experiments for each cycler channel which would take at least 1 million days and cost over $1B dollars!
 
-This is known as the curse of dimensionality (the more things you have to vary, the **exponentially** more combinations you have to test) and unfortunately batery engineers have this curse pretty bad! In fact several battery unicorns are spending basically all their money on R&D and still trying to bring their new technology to market without having yet put a single cell inside a single car.
+This is known as the curse of dimensionality (the more things you have to vary, the **exponentially** more combinations you have to test) and unfortunately battery engineers have this curse pretty bad! In fact several battery unicorns are spending basically all their money on R&D and still trying to bring their new technology to market without having yet put a single cell inside a single car.
 
 ![](figures/get-out.gif)
 
@@ -102,7 +102,7 @@ This is known as the curse of dimensionality (the more things you have to vary, 
 
 Your battery cell designer has some hope for your problem though, they have been testing a new material which could deliver more energy density while retaining high power. An anode with a mixture of graphite and silicon. This being silicon valley and all you are pretty excited as there must be plenty of that around and you ask when can you get some batteries to test out....?
 
-Well... your battery supplier says, *"we're still evaluating that material and it may be a little while longer. The intial tests in the lab look good though and there are already some cells on the market with silicon but they've had a few issues."* More on this in a bit.
+Well... your battery supplier says, *"we're still evaluating that material and it may be a little while longer. The initial tests in the lab look good though and there are already some cells on the market with silicon but they've had a few issues."* More on this in a bit.
 
 Typically, the cell designers won't actually be making all the modifications and carry out all these tests themselves. They will have their own suppliers of materials and they will be doing a lot of the tests too. Let's take the anode as an example: 
 
@@ -118,13 +118,13 @@ Adding silicon to an anode gives more capacity to the cell as there are more hos
 
 There are typically several stages of the process of lithiation where the crystal structure tends to form stable phases as the degree of lithiation increases or decreases. The chemical potential of the lithiated particles is directly related to the degree of lithiation (hard to measure) and this basically translates to the open circuit potential or voltage of the material (easier to measure). 
 
-Without diving too much deeper into the physics we can safely say, as you charge and dicharge, ions move in and out of the host material and voltage changes. The voltage changes more rapidly sometimes when crystal structures are changing or not changing from one stable phase to the next. Careful analysis of the open-circuit potential and it's derivative with respect to lithiation or capacity (dVdQ) can then reveal what the material inside might be because crystals are "somewhat" predictable. On the flip side: if you know the material you can predict the voltage (something the battery systems designers really like to know). I say "somewhat" because silicon unfortunately suffers from voltage hysteresis meaning that the voltage when charging and discharging in a cycle follows different paths, even when cycling very slowly, say 1 cycle per day. 
+Without diving too much deeper into the physics we can safely say, as you charge and discharge, ions move in and out of the host material and voltage changes. The voltage changes more rapidly sometimes when crystal structures are changing or not changing from one stable phase to the next. Careful analysis of the open-circuit potential and it's derivative with respect to lithiation or capacity (dVdQ) can then reveal what the material inside might be because crystals are "somewhat" predictable. On the flip side: if you know the material you can predict the voltage (something the battery systems designers really like to know). I say "somewhat" because silicon unfortunately suffers from voltage hysteresis meaning that the voltage when charging and discharging in a cycle follows different paths, even when cycling very slowly, say 1 cycle per day. 
 
 ![](figures/hysteresis.png)
 
 It sounds like a fairly trivial thing to know how much charge your battery has left (we call this the state of charge or SoC), why not just measure the current in and out constantly (a technique known as coulomb counting). However, counting is prone to error, if say a sensor fails or has a low accuracy or systematic error the predictions will drift over time. Voltage can be measured and gives an instant snapshot of the state of the battery and is therefore usually used as the indicator of SoC.
 
-But is voltage reliable? No not really. Voltage has its issues too and depends on how far from equilibrium the system is. Often what happens is the battery is left at rest and then cells connected in parallel start to equalize thier open circuit potentials and current re-balances. The overall charge left in the system is still the same but the voltage at rest has relaxed closer to equilibrium compared with when you switched the system off (this also happens inside the cell as well as between cells). Voltage also depends on temperature, ageing, and also whether you are charging or dicharging the battery (hysteresis).
+But is voltage reliable? No not really. Voltage has its issues too and depends on how far from equilibrium the system is. Often what happens is the battery is left at rest and then cells connected in parallel start to equalize their open circuit potentials and current re-balances. The overall charge left in the system is still the same but the voltage at rest has relaxed closer to equilibrium compared with when you switched the system off (this also happens inside the cell as well as between cells). Voltage also depends on temperature, ageing, and also whether you are charging or discharging the battery (hysteresis).
 
 ### Swelling & Cracking
 
@@ -192,7 +192,7 @@ plotter.plot(t=[1800])
 ![](figures/simulation_01_concs_1380.png)
 ![](figures/simulation_01_concs_1800.png)
 
-The concentration in the positive particle is still not equal as a function of radius. We can intuitively guess then that changing some feature of the positive particle may have some effect on the relaxation behaviour of the cell. Let's see what the current positive particle radius is and where changing this value has a significant effect.
+The concentration in the positive particle is still not equal as a function of radius. We can intuitively guess then that changing some feature of the positive particle may have some effect on the relaxation behavior of the cell. Let's see what the current positive particle radius is and where changing this value has a significant effect.
 
 ```
 parameter_values["Positive particle radius [m]"]
@@ -223,13 +223,13 @@ plotter.plot(t=[1800]) # At point of rest
 ![](figures/simulation_02_concs_1200.png)
 ![](figures/simulation_02_concs_1800.png)
 
-Now the contributions of the postive solid particle to the voltage at rest is resolved much more quickly than before. This is because the smaller particle size allows for faster diffusion of lithium ions in and out of the particle. This is a good example of how the model can be used to investigate the effect of different parameters on the performance of a battery.
+Now the contributions of the positive solid particle to the voltage at rest is resolved much more quickly than before. This is because the smaller particle size allows for faster diffusion of lithium ions in and out of the particle. This is a good example of how the model can be used to investigate the effect of different parameters on the performance of a battery.
 
-This is just one example of how to use modelling to debug your battery problem. **PyBaMM** also has many other examples including one on modelling [hysteresis](https://docs.pybamm.org/en/stable/source/examples/notebooks/models/differential-capacity-hysteresis-state.html) in silicon anodes. Also as we can see here a single experiment takes a matter of seconds and with some of the simpler models only a matter of ms. This helps engineers really battle the curse of dimensionality. For example the ragone plot below sweeping over some of the common parameters you might investigate changing contains 6500 data points and with each one taking less than 1s running one after the other on a single core would take under 2 hours to compute, already a massive saving compared to weeks with our 1000 channel cycler lab (each experiment takes less than an hour in the lab but we have to prepare the materials and build the cells too). With parallel computing this number can be cut to less than a minute.
+This is just one example of how to use modelling to debug your battery problem. **PyBaMM** also has many other examples including one on modelling [hysteresis](https://docs.pybamm.org/en/stable/source/examples/notebooks/models/differential-capacity-hysteresis-state.html) in silicon anodes. Also as we can see here a single experiment takes a matter of seconds and with some of the simpler models only a matter of ms. This helps engineers really battle the curse of dimensionality. For example the Ragone plot below sweeping over some of the common parameters you might investigate changing contains 6500 data points and with each one taking less than 1s running one after the other on a single core would take under 2 hours to compute, already a massive saving compared to weeks with our 1000 channel cycler lab (each experiment takes less than an hour in the lab but we have to prepare the materials and build the cells too). With parallel computing this number can be cut to less than a minute.
 
 ![](figures/ragone.png)
 
-If you liked this How to guide and want to learn more about battery modelling head to our github page (and don't forget to gice it a :star:) https://github.com/pybamm-team/PyBaMM
+If you liked this How to guide and want to learn more about battery modelling head to our github page (and don't forget to give it a :star:) https://github.com/pybamm-team/PyBaMM
 
 ![](figures/pybamm.png)
 
