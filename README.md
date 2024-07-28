@@ -237,6 +237,8 @@ For enterprises looking to get help with their battery modelling hit me up at to
 
 ![](figures/ionworks.png)
 
+All runnable code in this document can be found [here](how-to-debug-your-battery.ipynb)
+
 ## Links
 1. https://www.ycombinator.com/launches/LRR-ionworks-build-and-run-battery-simulations-at-scale
 2. https://www.batterydesign.net/power-versus-energy-cells/
