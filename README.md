@@ -1,6 +1,7 @@
-# How to debug your battery
+# How to debug your battery design
 ### By [Tom Tranter](https://www.linkedin.com/in/tom-tranter-355a1033/), Co-founder & CTO at [Ionworks](https://www.ionworks.com/)
 
+[ N.B I have edited the title to emphasize this is more a theoretical exploration of battery design than practical advice to fix your hardware issues - sorry to disappoint those coming for the latter ]
 
 Picture the scene, you're an engineer at an electric vehicle company and your boss comes to you and says: *"Jeremy we've got a problem!"* (your name is Jeremy by the way) *"It's these damn batteries, there's just too many of them in the car and it's weighing us down but we really want our customers to be able to drive 400 miles without having to stop and charge!"* - What do you do? How do you debug your battery? It's a black box of magic right?!? Wrong. Use simulation.
 
